@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Satyam Kumar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit-code.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- TODO: Get a free Font Awesome Kit -->
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="nav-logo">Satyam Kumar</a>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="projects.html" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="certifications.html" class="nav-link">Certifications</a>
+            </li>
+            <li class="nav-item">
+              <a href="blog.html" class="nav-link active">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="assets/resume/Satyam_Kumar_Resume.pdf"
+                class="nav-link btn btn-secondary"
+                target="_blank"
+                download
+                >Resume</a
+              >
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="blog-list" class="page-section">
+        <div class="container">
+          <h2>Blog & Insights</h2>
+          <p>Sharing my thoughts, learnings, and experiences in technology.</p>
+
+          <div class="blog-posts">
+            <!-- ==================================== -->
+            <!-- NEW BLOG POST PREVIEW (Ambilight)  -->
+            <!-- ==================================== -->
+            <article class="blog-post-preview">
+              <h3>
+                My DIY TV Ambilight Journey: Integrating WLED, HyperHDR & Home
+                Assistant
+              </h3>
+              <div class="blog-meta">
+                <span class="blog-date">October 26, 2024</span>
+                <!-- TODO: Update date -->
+                <span class="blog-tags"
+                  >Tags: IoT, ESP32, WLED, HyperHDR, Home Assistant, LED,
+                  DIY</span
+                >
+              </div>
+              <p>
+                From concert lighting inspiration to a fully integrated smart
+                home feature, this post chronicles the multi-year journey of
+                building a custom TV ambient lighting system using WLED,
+                HyperHDR, and Home Assistant...
+              </p>
+              <!-- TODO: Make sure 'blog-post-3.html' is the correct filename you used -->
+              <a href="blog-post-3.html" class="btn btn-tertiary">Read More</a>
+            </article>
+            <!-- ==================================== -->
+
+            <!-- Blog Post Preview 1 (Existing) -->
+            <article class="blog-post-preview">
+              <h3>Building Merkle rex: A C++ Crypto Trading Simulator</h3>
+              <div class="blog-meta">
+                <span class="blog-date">October 15, 2024</span>
+                <!-- TODO: Update date -->
+                <span class="blog-tags"
+                  >Tags: C++, Project, CLI, Simulation</span
+                >
+              </div>
+              <p>
+                A look into the challenges and learnings from developing a
+                command-line based cryptocurrency trading simulation platform
+                using C++ for a university project...
+              </p>
+              <a href="blog-post-1.html" class="btn btn-tertiary">Read More</a>
+            </article>
+
+            <!-- Blog Post Preview 2 (Existing) -->
+            <article class="blog-post-preview">
+              <h3>My First Dive into IoT: The Cloud-Based Light Switch</h3>
+              <div class="blog-meta">
+                <span class="blog-date">October 5, 2024</span>
+                <!-- TODO: Update date -->
+                <span class="blog-tags"
+                  >Tags: IoT, ESP32, MQTT, Arduino, Project</span
+                >
+              </div>
+              <p>
+                Exploring the Internet of Things by building a simple light
+                switch controlled over the internet using an ESP32
+                microcontroller and the MQTT protocol. Lessons learned and
+                future ideas...
+              </p>
+              <a href="blog-post-2.html" class="btn btn-tertiary">Read More</a>
+            </article>
+
+            <!-- Add more blog post previews as needed -->
+            <!-- Example if no blogs yet:
+                     <p><em>Coming Soon! I'm excited to share insights from my projects and learning journey. Check back later for posts on topics like [Topic 1] and [Topic 2].</em></p>
+                     -->
+          </div>
+          <!-- End Blog Posts -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2024 Satyam Kumar. All rights reserved.</p>
+        <div class="social-links">
+          <!-- TODO: Add actual links -->
+          <a
+            href="https://www.linkedin.com/in/satyam-kumar-4499951ba/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <!-- <a href="#" target="_blank" aria-label="GitHub"
+            ><i class="fab fa-github"></i> GitHub</a
+          > -->
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
