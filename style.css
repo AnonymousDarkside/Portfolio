@@ -975,3 +975,139 @@ footer {
   background-color: transparent;
   padding: 0;
 }
+
+/* --- Blog Post Gallery Styles --- */
+
+.blog-gallery-section {
+  margin-top: 3rem; /* Space above the gallery section */
+  padding-top: 2rem;
+  border-top: 1px solid var(--surface-color); /* Separator line */
+}
+
+.blog-gallery-section h2 {
+  text-align: center; /* Center the gallery heading */
+  margin-bottom: 1.5rem;
+}
+
+.blog-gallery-section p {
+  /* Style the intro paragraph */
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-muted-color);
+}
+
+.blog-gallery {
+  display: grid;
+  /* Adjust columns for responsiveness: 1 on small, 2 medium, 3 large */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem; /* Space between gallery items */
+}
+
+.gallery-item {
+  margin: 0; /* Reset figure margin */
+  background-color: var(--surface-color); /* Background for each item */
+  border-radius: var(--border-radius);
+  overflow: hidden; /* Ensure images stay within bounds */
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the image/video within the item */
+.gallery-item img,
+.gallery-item video {
+  display: block;
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity - adjust as needed */
+  object-fit: cover; /* Crop image/video nicely */
+  border-bottom: 1px solid var(--background-color); /* Line between media and caption */
+}
+
+/* Allow video height to be auto if embedding directly */
+.gallery-item video {
+  /* Remove fixed height if you prefer natural video aspect ratio */
+  height: auto;
+}
+
+.gallery-item a {
+  display: block; /* Make link cover the image */
+  text-decoration: none;
+}
+
+/* Style the caption */
+.gallery-item figcaption {
+  padding: 0.8rem 1rem;
+  font-size: 0.85em;
+  color: var(--text-muted-color);
+  text-align: center;
+  min-height: 40px; /* Ensure some space even without caption text */
+  display: flex; /* Center text vertically if short */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjustments for smaller screens if needed */
+@media (max-width: 500px) {
+  .blog-gallery {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+  .gallery-item img,
+  .gallery-item video {
+    height: 250px; /* Maybe allow more height in single column */
+  }
+}
+
+/* --- Thank You Page Specific Styles --- */
+#thank-you-message .container {
+  text-align: center;
+  padding-top: 4rem; /* Add some top padding */
+  padding-bottom: 4rem; /* Add some bottom padding */
+  min-height: 40vh; /* Ensure it takes up some vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+}
+
+#thank-you-message h2 {
+  /* Override default heading styles if they conflict with centering */
+  text-align: center;
+  border-bottom: none;
+  display: block;
+  position: static;
+  transform: none;
+  margin-bottom: 1rem;
+  font-size: 2.5rem; /* Make heading prominent */
+  color: var(--secondary-color); /* Use accent color */
+}
+
+#thank-you-message p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  max-width: 600px; /* Limit text width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#thank-you-message p:last-of-type {
+  margin-bottom: 2rem; /* Add space before button */
+}
+
+#thank-you-message .btn {
+  margin-top: 1rem; /* Adjust space above button */
+}
+
+/* Optional Icon Styling */
+/* Uncomment if using the icon in HTML */
+/*
+.thank-you-icon {
+  font-size: 4rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+*/
