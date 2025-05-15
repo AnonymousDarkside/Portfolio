@@ -871,7 +871,7 @@ footer {
 
 /* Style Figures and Captions */
 .blog-post-full article figure {
-  margin: 2rem auto; /* Center figure block */
+  margin: 1rem auto; /* Center figure block */
   text-align: center; /* Center image within figure */
   max-width: 90%; /* Prevent image from getting too wide */
 }
@@ -1040,11 +1040,11 @@ footer {
 
 /* Style the caption */
 .gallery-item figcaption {
-  padding: 0.8rem 1rem;
+  padding: 0.2rem 1rem; /* Reduced padding */
   font-size: 0.85em;
   color: var(--text-muted-color);
   text-align: center;
-  min-height: 40px; /* Ensure some space even without caption text */
+  min-height: 30px; /* Reduced min-height */
   display: flex; /* Center text vertically if short */
   align-items: center;
   justify-content: center;
