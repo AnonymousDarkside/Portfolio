@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the title to reflect the old post -->
+    <title>Cloud-Based Light Switch - Satyam Kumar (Archived)</title>
+
+    <meta http-equiv="refresh" content="15; url=ambilight_blog.html" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Adjust path if needed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--body-font);
+      }
+      .redirect-container {
+        text-align: center;
+        margin: auto;
+        padding: 2rem;
+        background-color: var(--surface-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        max-width: 600px;
+      }
+      .redirect-container h1 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      .redirect-container p {
+        color: var(--text-muted-color);
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+      .redirect-container a {
+        color: var(--secondary-color);
+        text-decoration: underline;
+      }
+      .redirect-container a:hover {
+        color: var(--primary-color);
+      }
+      .countdown {
+        font-weight: bold;
+        color: var(--text-color);
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      style="
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div class="redirect-container">
+        <h1>Post Content Moved</h1>
+        <p>
+          The content from the "Cloud-Based Light Switch" project has been
+          incorporated into the more comprehensive
+          <a href="ambilight_blog.html">DIY TV Ambilight Journey blog post</a>.
+        </p>
+        <p>
+          You will be redirected to the new post in
+          <span id="countdown" class="countdown">15</span> seconds.
+        </p>
+        <p>
+          If you are not redirected,
+          <a href="ambilight_blog.html">please click here</a>.
+        </p>
+      </div>
+    </main>
+
+    <script>
+      let seconds = 15;
+      const countdownElement = document.getElementById("countdown");
+      const interval = setInterval(() => {
+        seconds--;
+        if (countdownElement) {
+          countdownElement.textContent = seconds;
+        }
+        if (seconds <= 0) {
+          clearInterval(interval);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
