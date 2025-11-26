@@ -3,118 +3,217 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Update title -->
-    <title>
-      My DIY TV Ambilight Journey: WLED, HyperHDR & Home Assistant - Satyam
-      Kumar
-    </title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assests/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assests/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assests/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assests/icons/site.webmanifest" />
+    <title>My DIY TV Ambilight Journey: WLED, HyperHDR & Home Assistant</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    
     <script
       src="https://kit.fontawesome.com/your-fontawesome-kit-code.js"
       crossorigin="anonymous"
     ></script>
-    <!-- TODO: Get a free Font Awesome Kit -->
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assests/icons/favicon-32x32.png" />
+    
+    <style>
+        /* Blog Specific Overrides for Dark Theme */
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 25px 50px;
+        }
+        
+        .blog-header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid #233554;
+            padding-bottom: 30px;
+        }
+
+        .blog-meta {
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            color: var(--text-white);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background-color: var(--bg-light-navy);
+            color: var(--text-light-slate);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            border: 1px solid #233554;
+        }
+
+        article {
+            color: var(--text-slate);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        article h2 {
+            color: var(--text-white);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        article h2::before {
+            content: "#";
+            color: var(--accent-cyan);
+            margin-right: 10px;
+            font-family: var(--font-mono);
+        }
+
+        article h3 {
+            color: var(--text-light-slate);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        article p, article li {
+            margin-bottom: 15px;
+        }
+
+        article ul, article ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        figure {
+            margin: 40px 0;
+            background-color: var(--bg-light-navy);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #233554;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+            display: block;
+        }
+
+        figcaption {
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-light-slate);
+            padding-top: 10px;
+            font-style: italic;
+        }
+
+        /* Blog Gallery Grid */
+        .blog-gallery-section {
+            margin-top: 60px;
+            border-top: 1px solid #233554;
+            padding-top: 40px;
+        }
+
+        .blog-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+        }
+        
+        .back-link i {
+            margin-right: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: var(--bg-light-navy);
+        }
+        
+        th, td {
+            border: 1px solid #233554;
+            padding: 12px;
+            text-align: left;
+            color: var(--text-slate);
+        }
+        
+        th {
+            background-color: var(--bg-navy);
+            color: var(--accent-cyan);
+        }
+    </style>
   </head>
   <body>
-    <header>
-      <!-- Navbar code remains the same as previous blog post templates -->
-      <nav class="navbar">
-        <div class="container">
-          <a href="index.html" class="nav-logo">Satyam Kumar</a>
-          <!-- Note the ../ path -->
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="projects.html" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="certifications.html" class="nav-link">Certifications</a>
-            </li>
-            <li class="nav-item">
-              <a href="blog.html" class="nav-link active">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="assets/resume/Satyam_Kumar_Resume.pdf"
-                class="nav-link btn btn-secondary"
-                target="_blank"
-                download
-                >Resume</a
-              >
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">&lt;SatyamKumar /&gt;</a>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Stack</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="assests/Resume v2.1.pdf" target="_blank" class="btn-resume">Resume</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
-    <main>
-      <section class="page-section blog-post-full">
-        <div class="container">
-          <!-- Main Title -->
-          <h1>
-            My DIY TV Ambilight Journey: Integrating WLED, HyperHDR & Home
-            Assistant
-          </h1>
-          <!-- Meta Info -->
-          <div class="blog-meta">
-            <span class="blog-date">March 20, 2025</span>
-            <!-- TODO: Update Date -->
-            <span class="blog-tags"
-              >Tags: IoT, ESP32, WLED, HyperHDR, Home Assistant, LED, DIY,
-              Electronics, Software Integration</span
-            >
-          </div>
+    <main class="blog-container">
+        <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        
+        <header class="blog-header">
+            <div class="blog-meta">
+                <span>March 20, 2025</span>
+            </div>
+            <h1 class="blog-title">My DIY TV Ambilight Journey: Integrating WLED, HyperHDR & Home Assistant</h1>
+            <div class="blog-tags">
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">WLED</span>
+                <span class="tech-tag">HyperHDR</span>
+                <span class="tech-tag">Home Assistant</span>
+            </div>
+        </header>
 
-          <figure>
-            <!-- TODO: Add an image of the final WLED + HyperHDR setup in action -->
-            <img
-              src="assests\blog\ambilight\images\demo.jpg"
-              alt="Final Ambilight Setup with WLED and HyperHDR"
-            />
-            <figcaption>
-              <i>Ambilight effect using WLED driven by HyperHDR</i>
-            </figcaption>
-          </figure>
+        <figure>
+            <img src="assests/blog/ambilight/images/demo.jpg" alt="Final Ambilight Setup with WLED and HyperHDR" />
+            <figcaption>Ambilight effect using WLED driven by HyperHDR</figcaption>
+        </figure>
 
-          <!-- Article Content -->
-          <article>
+        <article>
             <p>
               Ever been mesmerized by the pulsating lights synchronized to the
               music at concerts like Ultra Miami or Tomorrowland? That vibrant,
@@ -172,20 +271,12 @@
               control the lights remotely from anywhere.
             </p>
 
-            <!-- Using figure for semantic image container -->
             <figure>
-              <img
-                src="assests\blog\ambilight\images\Wifi_COB.png"
-                alt="Early ESP8266 LED Controller Prototype"
-              />
-              <figcaption>
-                <i>An early ESP-based WiFi LED setup</i>
-              </figcaption>
+              <img src="assests/blog/ambilight/images/Wifi_COB.png" alt="Early ESP8266 LED Controller Prototype" />
+              <figcaption>An early ESP-based WiFi LED setup</figcaption>
             </figure>
 
-            <h2>
-              Discovering the Power Trio: OpenRGB, WLED, and Addressable LEDs
-            </h2>
+            <h2>Discovering the Power Trio: OpenRGB, WLED, and Addressable LEDs</h2>
             <p>
               This success paved the way for exploring broader home automation
               concepts. During this research, I stumbled upon several
@@ -221,9 +312,7 @@
               brightness.
             </p>
 
-            <h2>
-              The Ambilight Challenge: Bringing Reactive Lighting to the TV
-            </h2>
+            <h2>The Ambilight Challenge: Bringing Reactive Lighting to the TV</h2>
             <p>
               My goal now was to adapt this setup for true TV ambient lighting –
               dynamically matching the colors on the screen edges. This
@@ -231,21 +320,17 @@
             </p>
             <ol>
               <li>
-                <strong>Wireless Connectivity:</strong> Arduino lacked native
-                WiFi.
+                <strong>Wireless Connectivity:</strong> Arduino lacked native WiFi.
               </li>
               <li>
-                <strong>Self-Dependency:</strong> OpenRGB required my PC to be
-                running constantly.
+                <strong>Self-Dependency:</strong> OpenRGB required my PC to be running constantly.
               </li>
               <li>
-                <strong>Video Signal Capture:</strong> How to get the TV's
-                display information to the LEDs?
+                <strong>Video Signal Capture:</strong> How to get the TV's display information to the LEDs?
               </li>
             </ol>
 
             <h3>Attempt 1: The Raspberry Pi Approach (2022)</h3>
-            <!-- Using H3 for sub-sections within H2 -->
             <p>
               Remembering my brother's initial suggestion and having acquired a
               Raspberry Pi Zero 2W by 2022, I revisited the original Ambilight
@@ -267,13 +352,8 @@
               inefficient.
             </p>
             <figure>
-              <img
-                src="assests\blog\ambilight\images\RPI_Setup.jpg"
-                alt="The RPI Zero 2W Setup with HDMI Splitter and Capture Card"
-              />
-              <figcaption>
-                <i>The RPI Zero 2W Setup with HDMI Splitter and Capture Card</i>
-              </figcaption>
+              <img src="assests/blog/ambilight/images/RPI_Setup.jpg" alt="The RPI Zero 2W Setup with HDMI Splitter and Capture Card" />
+              <figcaption>The RPI Zero 2W Setup with HDMI Splitter and Capture Card</figcaption>
             </figure>
             <p>
               I realized I needed a more integrated solution that could
@@ -317,14 +397,9 @@
               efficient. While perfectly suitable for movies and general
               content, the perceived latency can be further fine-tuned by
               adjusting settings within both HyperHDR and WLED, such as the LED
-              refresh rate and smoothing options. Optimizing these involves
-              trade-offs between responsiveness and visual smoothness. For
-              deeper dives into these settings, you might want to check out
-              advanced configuration guides.
-              <!-- TODO: Link this to a future "Advanced WLED/HyperHDR Tuning" post if you write one -->
+              refresh rate and smoothing options.
             </p>
 
-            <!-- Embed video from Google Drive -->
             <figure class="video-figure">
               <iframe
                 src="https://drive.google.com/file/d/1wVFMMaIkuAU4M5jZcyDP3o0r3vs4ujYo/preview"
@@ -332,11 +407,9 @@
                 height="480"
                 allow="autoplay"
                 allowfullscreen
-                style="max-width: 100%; border: none"
+                style="max-width: 100%; border: none; border-radius: 5px;"
               ></iframe>
-              <figcaption>
-                <i>Demo of my TV Ambilight system in action.</i>
-              </figcaption>
+              <figcaption>Demo of my TV Ambilight system in action.</figcaption>
             </figure>
 
             <h2>My Current System: A Smart, Integrated Setup</h2>
@@ -367,9 +440,6 @@
               </li>
             </ul>
 
-            <!-- Using HR for visual separation, style in CSS -->
-            <!-- <hr /> -->
-
             <h2>Build Your Own: Hardware, Software & Setup Guide</h2>
             <p>
               Inspired? Here’s a guide based on my current setup to build your
@@ -378,580 +448,111 @@
             </p>
 
             <h3>Hardware Required:</h3>
-            <!-- Using H3 for sub-sections -->
             <ul>
-              <li>
-                <strong>Addressable LED Strip:</strong> WS2812B or SK6812 (5V).
-                Choose density (e.g., 30, 60, 144 LEDs/meter) based on desired
-                smoothness and budget. I use 60 LED/m.
-              </li>
-              <li>
-                <strong>Microcontroller:</strong> ESP32 Development Module
-                (DevKitC, WROOM, WROVER models work well).
-              </li>
-              <li>
-                <strong>Power Supply:</strong> 5V DC, appropriately rated (see
-                calculation below).
-              </li>
-              <!-- <li><strong>Logic Level Shifter (Recommended):</strong> 74AHCT125 or similar.</li> -->
-              <li>
-                <strong>Resistor:</strong> ~330-470 Ohm resistor for the data
-                line.
-              </li>
-              <li>
-                <strong>Microphone (for Sound Reactivity):</strong> INMP441
-                Digital I2S Microphone Module.
-              </li>
-              <li><strong>Jumper Wires:</strong> For connecting components.</li>
-              <li>
-                <strong>Power Injection:</strong> Thicker high gauge wire for
-                power injection. A minimum of 14-16 guage or 2.5mm thick is
-                required for current draw of above 10amps.
-              </li>
-              <li>
-                <strong>Optional:</strong> Soldering station, heat shrink
-                tubing, connectors (JST-SM), Zipties, wire strippers, electrical
-                tapes.
-              </li>
+              <li><strong>Addressable LED Strip:</strong> WS2812B or SK6812 (5V). I use 60 LED/m.</li>
+              <li><strong>Microcontroller:</strong> ESP32 Development Module.</li>
+              <li><strong>Power Supply:</strong> 5V DC, appropriately rated.</li>
+              <li><strong>Resistor:</strong> ~330-470 Ohm resistor for the data line.</li>
+              <li><strong>Microphone:</strong> INMP441 Digital I2S Microphone Module.</li>
+              <li><strong>Jumper Wires, Power Injection Wires (14-16 gauge).</strong></li>
             </ul>
 
             <h3>Software Required:</h3>
             <ul>
-              <li>
-                <strong>Primary Controller:</strong> WLED (<a
-                  href="https://kno.wled.ge/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Official Website</a
-                >)
-              </li>
-              <li>
-                <strong>For Ambilight (PC/Laptop Source):</strong> HyperHDR (<a
-                  href="https://github.com/awawa-dev/HyperHDR"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >)
-              </li>
-              <li>
-                <strong>For Automation:</strong> Home Assistant (<a
-                  href="https://www.home-assistant.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Official Website</a
-                >) (Optional)
-              </li>
-              <li>
-                <strong>For Music Sequencing:</strong> xLights (<a
-                  href="https://xlights.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Official Website</a
-                >) (Optional)
-              </li>
+              <li><strong>Primary Controller:</strong> WLED</li>
+              <li><strong>For Ambilight:</strong> HyperHDR</li>
+              <li><strong>For Automation:</strong> Home Assistant (Optional)</li>
             </ul>
 
             <h3>Step 1: Flashing WLED onto the ESP32</h3>
             <ol>
               <li>Connect the ESP32 Dev Module to your PC via USB.</li>
-              <li>
-                Go to the official WLED web installer:
-                <a
-                  href="https://install.wled.me/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >https://install.wled.me/</a
-                >
-              </li>
-              <li>
-                Click "Install", select the correct COM port for your ESP32, and
-                follow the prompts.
-              </li>
-              <figure>
-                <img
-                  src="assests\blog\ambilight\images\WLED_installer.png"
-                  alt="WLED Web Installer Page"
-                />
-                <figcaption><i>The WLED Web Installer Interface</i></figcaption>
-              </figure>
-              <li>
-                After installation, connect WLED to your WiFi network via the
-                prompts.
-              </li>
-              <li>
-                Once connected, click "Visit Device". Note down its IP address.
-              </li>
+              <li>Go to <a href="https://install.wled.me/" target="_blank">install.wled.me</a></li>
+              <li>Click "Install" and select the correct COM port.</li>
             </ol>
+            <figure>
+              <img src="assests/blog/ambilight/images/WLED_installer.png" alt="WLED Web Installer Page" />
+              <figcaption>The WLED Web Installer Interface</figcaption>
+            </figure>
 
             <h3>Step 2: Configuring WLED LED Preferences</h3>
-            <ol>
-              <li>
-                In WLED, navigate to <strong>Config > LED Preferences</strong>.
-              </li>
-              <li>Set "Type" to "WS281x".</li>
-              <li>Enter "Length" (total number of LEDs).</li>
-              <li>
-                Set "Data GPIO" pin number. (e.g., GPIO 2 is common, but check
-                your ESP32 board pinout).
-              </li>
-              (Note: Not all GPIO pins on the ESP32 are suitable for driving LED
-              data reliably due to internal functions or limitations. While
-              common choices exist, some pins might cause issues. For instance,
-              I often use GPIO 13 (sometimes labeled D13 on specific boards)
-              successfully. Always consult the pinout diagram and documentation
-              for your specific ESP32 development board model to identify
-              recommended and safe pins for digital output tasks like driving
-              WS2812B LEDs.)
-              <li>
-                <strong>Power Calculation & Limiting:</strong>
-                <ul>
-                  <li>Note WLED's "Recommended power supply" estimate.</li>
-                  <li>Calculate max current: Total LEDs × 0.06 Amps.</li>
-                  <li>
-                    Choose a PSU rated ~50-70% of max current OR 130-150% of
-                    "Most Effects" current.
-                  </li>
-                  <li>
-                    **Enable** "Automatic brightness limiter" and set "Maximum
-                    Current" according to your PSU's rating.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Power Injection Warning:</strong> Use thicker wires and
-                inject power at multiple points for strips drawing > 5-10A.
-              </li>
-              <li>Click "Save".</li>
-            </ol>
+            <p>
+                In WLED, navigate to <strong>Config > LED Preferences</strong>. Set "Type" to "WS281x" and enter your total LED count.
+                Calculate your power needs carefully—enable the "Automatic brightness limiter" to match your PSU.
+            </p>
 
             <h3>Step 3: Wiring the Hardware</h3>
-            <ol>
-              <li>Disconnect the ESP32 from your PC.</li>
-              <li>
-                Connect components carefully (Check polarity!):
-                <ul>
-                  <li>PSU 5V+ to LED 5V+ & ESP32 VIN/5V(PSU).</li>
-                  (A dedicated 5V power line is recommended for powering the ESP
-                  Module, as it can provide a more stable voltage and safe guard
-                  against voltage drops from the led strip)
-                  <li>PSU GND(-) to LED GND(-), ESP32 GND, Mic GND.</li>
-                  <li>
-                    ESP32 Data Pin -> Resistor -> LED DI (Use level shifter if
-                    needed).
-                  </li>
-                  <li>Connect Mic pins (See Step 6 table).</li>
-                </ul>
-              </li>
-              <figure class="image-center">
-                <img
-                  src="assests\blog\ambilight\images\WLED_Wiring.png"
-                  alt="WLED Wiring Diagram for ESP32 and WS2812B"
-                />
-                <!-- TODO: Create and add a clear wiring diagram image -->
-                <figcaption>
-                  <i
-                    >Basic WLED Wiring Diagram (ESP32, WS2812B, PSU). Mic
-                    connections not shown.</i
-                  >
-                </figcaption>
-              </figure>
-              <li>Power on. LEDs should light up in Golden Yellow.</li>
-            </ol>
+            <figure>
+              <img src="assests/blog/ambilight/images/WLED_Wiring.png" alt="WLED Wiring Diagram for ESP32 and WS2812B" />
+              <figcaption>Basic WLED Wiring Diagram (ESP32, WS2812B, PSU)</figcaption>
+            </figure>
 
-            <h3>Step 4: Setting Up HyperHDR (for PC/Laptop Ambilight)</h3>
-            <ol>
-              <li>
-                Download and install the latest stable HyperHDR release for your
-                OS.
-              </li>
-              <li>Launch HyperHDR and open its Web Configuration.</li>
-              <li>
-                <strong>LED Hardware:</strong> Set "Controller type" to "WLED",
-                enter WLED IP, check "Restore lights' original state...", Save.
-              </li>
-              <li>
-                <strong>LED Layout Tab:</strong>
-                <ul>
-                  <li>
-                    Measure or count the number of LEDs along the Top, Bottom,
-                    Left, and Right edges of your TV/monitor where the strip is
-                    placed.
-                  </li>
-                  <li>
-                    Enter these counts into the "Classic Layout" fields. Adjust
-                    gap settings if needed.
-                  </li>
-                  <li>
-                    <em>
-                      (Note: Settings like 'Smoothing' under 'Image Processing'
-                      can also impact visual latency and smoothness. Advanced
-                      tuning is possible but start with defaults.)
-                    </em>
-                    <a
-                      href="[Link: Advanced_WLED_HyperHDR_Tuning_Blog_Post]"
-                      title="Coming Soon: Advanced Tuning Guide"
-                      >(Coming Soon: Advanced Tuning Guide)</a
-                    >
-                  </li>
-                  <li>Click "Save".</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Video Capturing:</strong> Uncheck "Enable USB capture",
-                Check "Enable Screen Capture", Select your screen "Device",
-                Save.
-              </li>
-              <li>
-                Test Ambilight. Use "Advanced Settings > RGB Byte Order Wizard"
-                if colors are wrong.
-              </li>
-            </ol>
+            <h3>Step 4: Setting Up HyperHDR</h3>
+            <p>
+                Launch HyperHDR, go to <strong>LED Hardware</strong>, and set "Controller type" to "WLED" with your ESP32's IP. 
+                Use the <strong>LED Layout</strong> tab to define your screen dimensions.
+            </p>
 
             <h3>Step 5: Home Assistant Integration (Optional)</h3>
-            <ol>
-              <li>
-                In Home Assistant:
-                <strong>Settings > Devices & Services</strong>.
-              </li>
-              <li>
-                Configure the auto-discovered WLED device or "Add Integration"
-                -> "WLED" -> Enter IP/hostname.
-              </li>
-              <li>Control WLED and use it in automations.</li>
-            </ol>
-
-            <h3>
-              Step 6: Native Sound Reactivity Setup (Optional, ESP32 Only)
-            </h3>
-            <ol>
-              <li>
-                Connect the INMP441 microphone to ESP32:
-                <!-- Simple Table -->
-                <table>
-                  <thead>
-                    <tr>
-                      <th>INMP441</th>
-                      <th>ESP32 GPIO (Default)</th>
-                      <th>Function</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>L/R</td>
-                      <td>GND</td>
-                      <td>Selects Channel (GND=Left)</td>
-                    </tr>
-                    <tr>
-                      <td>SD</td>
-                      <td>32</td>
-                      <td>Serial Data Out</td>
-                    </tr>
-                    <tr>
-                      <td>WS</td>
-                      <td>15</td>
-                      <td>Left-Right Clock</td>
-                    </tr>
-                    <tr>
-                      <td>SCK</td>
-                      <td>14</td>
-                      <td>Serial Clock</td>
-                    </tr>
-                    <tr>
-                      <td>VDD</td>
-                      <td>3.3V</td>
-                      <td>Power (<strong>Do not use 5V!</strong>)</td>
-                    </tr>
-                    <tr>
-                      <td>GND</td>
-                      <td>GND</td>
-                      <td>Ground</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-              <li>In WLED: <strong>Config > Usermods</strong>.</li>
-              <li>
-                Verify/adjust GPIO pins to match your wiring. Enable Sound
-                Reactive features. Save.
-              </li>
-              <li>
-                Select a sound-reactive effect (e.g., "Puddlepeak, Puddles") and
-                test with music.
-              </li>
-            </ol>
-
-            <h3>Step 7: Sequential Music Lighting with xLights (Optional)</h3>
             <p>
-              xLights allows intricate music synchronization. You can add
-              effects linking to partucular Rythm of music which makes it look
-              profession when compared to Random reaction using WLED sound based
-              reaction.
+                In Home Assistant, go to <strong>Settings > Devices & Services</strong> and add the WLED integration. 
+                This allows you to automate the lights based on TV state.
             </p>
-            <ol>
-              <li>Install xLights.</li>
-              <li>
-                Configure WLED as an E1.31/DDP output in xLights Controllers
-                tab.
-              </li>
-              <li>Define your LED layout visually in the Layout tab.</li>
-              <li>Create sequences synchronized to audio tracks.</li>
-              <li>Playback sends data to WLED in real-time.</li>
-              <li>
-                <em>(Detailed setup involves models, channel mapping, etc.)</em>
-              </li>
-            </ol>
 
-            <h2>Challenges & Key Takeaways</h2>
+            <h3>Step 6: Native Sound Reactivity Setup (Optional)</h3>
             <p>
-              This project involved hurdles like managing high power needs,
-              ensuring reliable data signals, troubleshooting Pi overheating,
-              and finding the best software integration.
+                Connect the INMP441 microphone (SD to GPIO 32, WS to 15, SCK to 14 on ESP32) and enable the Sound Reactive usermod in WLED.
             </p>
-            <p>Key Takeaways:</p>
-            <ul>
-              <li>Practical electronics (voltage, current, wiring).</li>
-              <li>
-                Microcontroller usage (Arduino, ESP32) and firmware (WLED).
-              </li>
-              <li>Addressable LED tech and protocols (WS281x, E1.31).</li>
-              <li>Cross-platform software integration (WLED, HyperHDR, HA).</li>
-              <li>Networking basics (IP addresses, WiFi).</li>
-              <li>Leveraging open-source software and communities.</li>
-            </ul>
 
             <h2>Conclusion</h2>
             <p>
               What started as a simple desire for reactive lighting evolved into
               a core component of my smart home setup. This DIY Ambilight
               project has been incredibly rewarding, blending software,
-              hardware, and creative problem-solving. It's a testament to the
-              power of open-source communities and the satisfaction of building
-              something tangible and personalized. If you're interested in smart
-              lighting or IoT, I highly encourage exploring WLED and similar
-              projects – the possibilities are vast!
+              hardware, and creative problem-solving.
             </p>
-
-            <hr />
-            <!-- Optional: Separator before gallery -->
 
             <section class="blog-gallery-section">
               <h2>Project Gallery</h2>
-              <p>
-                Here are some additional photos and videos showcasing different
-                stages and aspects of the project:
-              </p>
+              <p>Here are some additional photos and videos showcasing different stages and aspects of the project:</p>
               <div class="blog-gallery">
-                <!-- Video Item 1 -->
-                <figure class="gallery-item gallery-item-video">
-                  <iframe
-                    src="https://drive.google.com/file/d/1Q5U-e9_Wv31G7J-Ghc0CsgkZghMvVNUU/preview"
-                    width="100%"
-                    height="200"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="border: none"
-                  ></iframe>
+                <figure class="gallery-item">
+                  <iframe src="https://drive.google.com/file/d/1Q5U-e9_Wv31G7J-Ghc0CsgkZghMvVNUU/preview" width="100%" height="200" style="border: none"></iframe>
                   <figcaption>Ambilight Demo (Light Waves)</figcaption>
                 </figure>
-
-                <!-- Video Item 2 -->
-                <figure class="gallery-item gallery-item-video">
-                  <iframe
-                    src="https://drive.google.com/file/d/19mrhX8smM-Pd8AYSDMPyyNG9NuZUjUmV/preview"
-                    width="100%"
-                    height="200"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="border: none"
-                  ></iframe>
-                  <figcaption>Ambilight Demo (Foundation)</figcaption>
-                </figure>
-
-                <!-- Video Item 3 -->
-                <figure class="gallery-item gallery-item-video">
-                  <iframe
-                    src="https://drive.google.com/file/d/18z_7WHOqhJE74n1aM_r6QFY9B0aKVAZk/preview"
-                    width="100%"
-                    height="200"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="border: none"
-                  ></iframe>
-                  <figcaption>
-                    Ambilight Demo (Ultra - The Chainsmokers set)
-                  </figcaption>
-                </figure>
-
-                <!-- Video Item 4 -->
-                <figure class="gallery-item gallery-item-video">
-                  <iframe
-                    src="https://drive.google.com/file/d/1gvwIwuU29E6toHkz8zdVTMhefKPuyaUV/preview"
-                    width="100%"
-                    height="200"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="border: none"
-                  ></iframe>
-                  <figcaption>
-                    Ambilight Demo (Tomorrowland - Armin Van Buren)
-                  </figcaption>
-                </figure>
-
-                <!-- Video Item 5 -->
-                <figure class="gallery-item gallery-item-video">
-                  <iframe
-                    src="https://drive.google.com/file/d/1CQb91UqMuSvjOLisUIs9ys-2tahjQ4YU/preview"
-                    width="100%"
-                    height="200"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="border: none"
-                  ></iframe>
+                <figure class="gallery-item">
+                  <iframe src="https://drive.google.com/file/d/1CQb91UqMuSvjOLisUIs9ys-2tahjQ4YU/preview" width="100%" height="200" style="border: none"></iframe>
                   <figcaption>WLED Music Effects Demo</figcaption>
                 </figure>
 
-                <!-- Video Item 6 -->
-                <figure class="gallery-item gallery-item-video">
-                  <iframe
-                    src="https://drive.google.com/file/d/1SS0IRu21tPDWoJFdLsu55bpC9jHafGad/preview"
-                    width="100%"
-                    height="200"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="border: none"
-                  ></iframe>
-                  <figcaption>OpenRGB Demo - 1</figcaption>
-                </figure>
-
-                <!-- Video Item 7 -->
-                <figure class="gallery-item gallery-item-video">
-                  <iframe
-                    src="https://drive.google.com/file/d/1t0WGC4tcjOPI7yLclCgTgCKpSXcxQuLG/preview"
-                    width="100%"
-                    height="200"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="border: none"
-                  ></iframe>
-                  <figcaption>OpenRGB Demo - 2</figcaption>
-                </figure>
-
-                <!-- Video Item 8 -->
-                <figure class="gallery-item gallery-item-video">
-                  <iframe
-                    src="https://drive.google.com/file/d/1iMgVKwu1xzNUOgDt0gWH3GJdV-8W9-D1/preview"
-                    width="100%"
-                    height="200"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    style="border: none"
-                  ></iframe>
-                  <figcaption>
-                    Default (Automatically turns on/off based on TV status -
-                    Controlled by Home Assistant)
-                  </figcaption>
-                </figure>
-
-                <!-- Image Item 1: WLED UI -->
                 <figure class="gallery-item">
-                  <a
-                    href="assests\blog\ambilight\images\WLED.png"
-                    data-lightbox="ambilight-gallery"
-                    data-title="WLED UI"
-                  >
-                    <img
-                      src="assests\blog\ambilight\images\WLED.png"
-                      alt="WLED UI"
-                      style="width: 100%; height: auto"
-                    />
-                  </a>
+                  <img src="assests/blog/ambilight/images/WLED.png" alt="WLED UI" />
                   <figcaption>WLED UI</figcaption>
                 </figure>
-
-                <!-- Image Item 2: HyperHDR UI -->
                 <figure class="gallery-item">
-                  <a
-                    href="assests\blog\ambilight\images\HyperHDR1.jpg"
-                    data-lightbox="ambilight-gallery"
-                    data-title="HyperHDR UI"
-                  >
-                    <img
-                      src="assests\blog\ambilight\images\HyperHDR1.jpg"
-                      alt="HyperHDR UI"
-                      style="width: 100%; height: auto"
-                    />
-                  </a>
+                  <img src="assests/blog/ambilight/images/HyperHDR1.jpg" alt="HyperHDR UI" />
                   <figcaption>HyperHDR UI</figcaption>
                 </figure>
-
-                <!-- Image Item 3: Home Assistant UI -->
                 <figure class="gallery-item">
-                  <a
-                    href="assests\blog\ambilight\images\Home Assisstant full.png"
-                    data-lightbox="ambilight-gallery"
-                    data-title="Home Assistant UI(All Functions)"
-                  >
-                    <img
-                      src="assests\blog\ambilight\images\Home Assisstant full.png"
-                      alt="Home Assistant UI(All Functions)"
-                      style="width: 100%; height: auto"
-                    />
-                  </a>
-                  <figcaption>
-                    Home Assistant UI(All Functions, automations depends on
-                    personal use cases and can be customized)
-                  </figcaption>
-                </figure>
-                <!-- Image Item 4: Home Assistant UI(Custom) -->
-                <figure class="gallery-item">
-                  <a
-                    href="assests\blog\ambilight\images\HA Custom view.png"
-                    data-lightbox="ambilight-gallery"
-                    data-title="Home Assistant UI(My Customised UI)"
-                  >
-                    <img
-                      src="assests\blog\ambilight\images\HA Custom view.png"
-                      alt="Home Assistant UI(My Customised UI)"
-                      style="width: 100%; height: auto"
-                    />
-                  </a>
-                  <figcaption>
-                    Home Assistant UI(My daily-use customised UI for TV and LED
-                    strip)
-                  </figcaption>
+                  <img src="assests/blog/ambilight/images/Home Assisstant full.png" alt="Home Assistant UI" />
+                  <figcaption>Home Assistant Integration</figcaption>
                 </figure>
               </div>
-              <!-- /.blog-gallery -->
             </section>
-            <!-- /.blog-gallery-section -->
 
-            <!-- Back Link -->
-            <a href="blog.html" class="link">← Back to Blog List</a>
-            <!-- Adjust path if needed -->
-          </article>
-        </div>
-      </section>
+        </article>
     </main>
 
     <footer>
-      <!-- Footer code remains the same -->
       <div class="container">
-        <p>© 2024 Satyam Kumar. All rights reserved.</p>
         <div class="social-links">
-          <!-- TODO: Add actual links -->
-          <a
-            href="https://www.linkedin.com/in/satyam-kumar-4499951ba/"
-            target="_blank"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-          <!-- <a href="#" target="_blank" aria-label="GitHub"
-            ><i class="fab fa-github"></i> GitHub</a
-          > -->
+          <a href="https://www.linkedin.com/in/satyam-kumar-4499951ba/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:ksatyam0468@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
+        <p class="copyright">Designed & Engineered by Satyam Kumar.</p>
       </div>
     </footer>
+
     <script src="script.js"></script>
-    <!-- Adjust path if needed -->
   </body>
 </html>

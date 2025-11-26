@@ -3,166 +3,302 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Satyam Kumar - Software Developer</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assests/icons/apple-touch-icon.png"
+    <meta
+      name="description"
+      content="Satyam Kumar - Cloud Platform Engineer and AI Infrastructure specialist."
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assests/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assests/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assests/icons/site.webmanifest" />
+    <title>Satyam Kumar | Cloud & AI Infrastructure</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    
     <script
       src="https://kit.fontawesome.com/your-fontawesome-kit-code.js"
       crossorigin="anonymous"
     ></script>
-    <!-- TODO: Get a free Font Awesome Kit if you want icons -->
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assests/icons/favicon-32x32.png" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="container">
-          <a href="index.html" class="nav-logo">Satyam Kumar</a>
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link active">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="projects.html" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="certifications.html" class="nav-link">Certifications</a>
-            </li>
-            <li class="nav-item">
-              <a href="blog.html" class="nav-link">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a
-                href="assests/Resume v2.1.pdf"
-                class="nav-link btn btn-secondary"
-                target="_blank"
-                download
-                >Resume</a
-              >
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">&lt;SatyamKumar /&gt;</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Stack</a></li>
+          <li><a href="#projects">Engineering</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="assests\Resume v3(S).pdf" target="_blank" class="btn-resume">Resume</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
-    <main>
-      <section id="hero" class="hero-section">
-        <div class="container hero-content">
-          <div class="hero-text">
-            <h1>Hi, I'm Satyam Kumar</h1>
-            <p class="subtitle">
-              Software Developer & Computer Science Graduate
+    <section id="hero">
+      <div class="container hero-layout">
+        <div class="hero-text-content">
+            <p class="mono-accent">Hi, my name is</p>
+            <h1>Satyam Kumar.</h1>
+            <h2 class="text-gradient">I build scalable Cloud & AI Infrastructure.</h2>
+            <p class="bio">
+            Bridging the gap between hyperscale cloud (GCP/AWS) and bare-metal hardware. 
+            I am a <strong>Cloud Platform Engineer</strong> and <strong>Home Lab Enthusiast</strong> 
+            passionate about building scalable RAG pipelines, managing hybrid virtualization environments, 
+            and engineering low-latency IoT systems.
             </p>
-            <p>
-              Driven by a passion for building practical solutions where
-              software meets the physical world. From crafting immersive IoT
-              experiences like Ambilight inspired by EDM concerts, to exploring
-              local LLMs and building resourceful home servers, I thrive on
-              learning, creative problem-solving, and bringing innovative tech
-              ideas to life.
-            </p>
-            <div class="hero-buttons">
-              <a href="projects.html" class="btn btn-primary"
-                >View My Projects</a
-              >
-              <a href="about.html" class="btn btn-secondary"
-                >Learn More About Me</a
-              >
+            <div class="hero-cta">
+            <a href="#projects" class="btn-primary">View Infrastructure</a>
+            <a href="#contact" class="btn-outline">Get In Touch</a>
             </div>
-          </div>
-          <div class="hero-image">
-            <img
-              src="assests\Home\profile.jpg"
-              alt="Satyam Kumar Profile Picture"
-            />
-          </div>
         </div>
-      </section>
-
-      <section id="quick-skills" class="quick-skills-section">
-        <div class="container">
-          <h2>Key Skills</h2>
-          <div class="skills-list">
-            <span>Python</span>
-            <span>JavaScript</span>
-            <span>HTML/CSS</span>
-            <span>IoT</span>
-            <span>ML/AI Concepts</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="featured-project" class="featured-project-section">
-        <div class="container">
-          <h2>Featured Project</h2>
-          <div class="project-card">
-            <h3>DIY Ambilight TV Backlight</h3>
-            <p>
-              Building an immersive DIY Ambilight system using ESP
-              devices/Raspberry Pi and WLED software, inspired by concert
-              lighting effects. Control LEDs synced with screen content for an
-              enhanced viewing experience.
-            </p>
-            <div class="project-tags">
-              <span>IoT</span> <span>WLED</span> <span>ESP32</span>
-              <span>DIY</span> <span>Raspberry Pi</span>
+        <div class="hero-image-container">
+            <div class="image-wrapper">
+                <img src="assests/Home/profile.jpg" alt="Satyam Kumar" class="profile-img">
             </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title"><span>01.</span> Technical Arsenal</h2>
+        <div class="skills-grid">
+          
+          <div class="skill-card">
+            <i class="fas fa-cloud skill-icon"></i>
+            <h3>Cloud & Infra</h3>
+            <p>Google Cloud Platform (GCE, GCS, Cloud Functions), AWS (EC2), Docker, Kubernetes (Helm), Load Balancing (Tomcat), Cloudflare Zero Trust.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-network-wired skill-icon"></i>
+            <h3>AI & Data Engineering</h3>
+            <p>RAG Pipelines, Vector Databases (Milvus), Local LLMs (Ollama), MQTT, Data Ingestion Pipelines.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-terminal skill-icon"></i>
+            <h3>Automation & Scripting</h3>
+            <p>Python, Bash/Shell Scripting, n8n (Workflow Automation), YAML, Infrastructure as Code principles.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-server skill-icon"></i>
+            <h3>Hardware & OS</h3>
+            <p>Linux (Debian/Ubuntu), TrueNAS Core (ZFS), Raspberry Pi (ARMv8), AMD Ryzen Workstations, ESP32 Microcontrollers.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title"><span>02.</span> Featured Infrastructure</h2>
+        
+        <div class="project-card featured">
+          <div class="project-content">
+            <p class="project-overline">Cloud-Native Architecture</p>
+            <h3 class="project-title">Cloud-Native RAG Application</h3>
+            <div class="project-desc">
+              <p>
+                A serverless, cloud-native application designed to query 200+ AI research papers. 
+                Architected on <strong>Google Cloud Platform</strong> using Cloud Functions for event-driven processing. 
+                Engineered a microservices stack with Docker to handle PDF parsing, chunking, and vector embedding generation.
+              </p>
+            </div>
+            <ul class="project-tech-list">
+              <li>GCP</li>
+              <li>Docker</li>
+              <li>Python</li>
+              <li>Milvus DB</li>
+              <li>Ollama</li>
+              <li>FastAPI</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-content">
+            <p class="project-overline">Infrastructure & Virtualization</p>
+            <h3 class="project-title">Resourceful Home Lab</h3>
+            <div class="project-desc">
+              <p>
+                An enterprise-grade hybrid virtualization environment running on heterogeneous hardware 
+                (AMD Ryzen x86 & Raspberry Pi ARM). Hosts a <strong>Network Attached Storage (NAS)</strong> 
+                with ZFS for data integrity, automated via n8n workflows and Bash scripts. 
+                Secured via Cloudflare Zero Trust tunnels to eliminate open ports.
+              </p>
+            </div>
+            <ul class="project-tech-list">
+              <li>TrueNAS Core (ZFS)</li>
+              <li>VirtualBox</li>
+              <li>Cloudflare Zero Trust</li>
+              <li>n8n</li>
+              <li>Bash</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-content">
+            <p class="project-overline">Embedded Systems & IoT</p>
+            <h3 class="project-title">IoT Ambient Lighting System</h3>
+            <div class="project-desc">
+              <p>
+                A distributed, low-latency IoT node engineered with C++ and ESP32s. 
+                Integrated with <strong>Home Assistant</strong> via MQTT for central state management and automation.
+                Optimized the firmware to utilize dual-core processing for real-time FFT signal analysis, ensuring zero-lag sound reactivity.
+              </p>
+            </div>
+            <ul class="project-tech-list">
+              <li>C++</li>
+              <li>ESP32</li>
+              <li>MQTT</li>
+              <li>Home Assistant</li>
+              <li>Signal Processing (FFT)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-content">
+            <p class="project-overline">Product Engineering</p>
+            <h3 class="project-title">DIY Ambilight TV Backlight</h3>
+            <div class="project-desc">
+              <p>
+                An immersive media experience inspired by concert lighting. Synchronizes LED lighting with on-screen video content using HyperHDR and WLED. 
+                Features custom presets, wireless synchronization, and a fully integrated user experience.
+              </p>
+            </div>
+            <ul class="project-tech-list">
+              <li>HyperHDR</li>
+              <li>WLED</li>
+              <li>E1.31 Protocol</li>
+              <li>User Experience</li>
+            </ul>
             <div class="project-links">
-              <a href="ambilight_blog.html" class="link">Read Blog Post</a>
+               <a href="ambilight_blog.html" class="link-highlight">Read Project Blog <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <div class="project-card featured">
+          <div class="project-content">
+            <p class="project-overline">Full Stack Development</p>
+            <h3 class="project-title">InterPlant PWA</h3>
+            <div class="project-desc">
+              <p>
+                A Progressive Web Application for environmental awareness. Built with ReactJS and PostgreSQL. 
+                Optimized for performance using Service Workers for offline capabilities.
+              </p>
+            </div>
+            <ul class="project-tech-list">
+              <li>ReactJS</li>
+              <li>PostgreSQL</li>
+              <li>PWA</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-links">
+                <a href="assests/Projects/INTERPLANT Final Report.pdf" target="_blank" class="link-highlight">View Project Report <i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 class="section-title"><span>03.</span> About Me</h2>
+            <p>
+              I am a Computer Science graduate from <strong>Goldsmiths, University of London</strong>, 
+              but my real education happens in the CLI. I define myself as a "Tinkerer" — I don't just consume APIs; 
+              I build the underlying infrastructure.
+            </p>
+            <p>
+              My journey started with web development (building apps like InterPlant), but I pivoted when I realized 
+              I enjoyed configuring the servers more than centering the Divs. Today, I focus on <strong>Hybrid Cloud</strong> 
+              solutions, deploying local AI models on bare metal, and architecting secure networks.
+            </p>
+            <p>
+                Currently, I am optimizing local LLMs (Gemma, Deepseek) to run efficiently on consumer hardware 
+                and architecting serverless pipelines on GCP.
+            </p>
+          </div>
+          <div class="cert-text">
+            <h3 class="cert-title">Certifications & Experience</h3>
+            <ul class="cert-list">
+              <li>
+                <a href="https://coursera.org/share/e22420d1937945d4730c0281fd7c8a9b" target="_blank" class="cert-link">
+                    <strong>Google IT Support Professional</strong>
+                </a><br>
+                <span class="mono-accent">Coursera</span>
+              </li>
+              <li>
+                <a href="https://drive.google.com/file/d/1LrtlmtPSeY_TG7R93oDSTtly3FRGXEJK/view" target="_blank" class="cert-link">
+                    <strong>Introduction to Quantum Computing</strong>
+                </a><br>
+                <span class="mono-accent">Qubit x Qubit / IBM Quantum</span>
+              </li>
+              <li>
+                <a href="https://www.brightnetwork.co.uk/certificates/internship-experience-uk-techn_uenbvidzgm6sqo/" target="_blank" class="cert-link">
+                    <strong>Internship Experience UK: Technology</strong>
+                </a><br>
+                <span class="mono-accent">Bright Network (Partnered with Google & Amazon)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title center-title"><span>04.</span> Get In Touch</h2>
+            <p class="contact-intro">
+                I'm currently looking for opportunities in Cloud Engineering and AI Infrastructure. 
+                Whether you have a question about my Home Lab, want to discuss IoT, or just want to say hi, my inbox is open.
+            </p>
+            
+            <div class="contact-wrapper">
+                <form action="https://formspree.io/f/mldbdkvk" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="_replyto" required placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Hello, let's build something..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer>
       <div class="container">
-        <p>© 2024 Satyam Kumar. All rights reserved.</p>
         <div class="social-links">
-          <!-- TODO: Add actual links -->
-          <a
-            href="https://www.linkedin.com/in/satyam-kumar-4499951ba/"
-            target="_blank"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-          <!-- <a href="#" target="_blank" aria-label="GitHub"
-            ><i class="fab fa-github"></i> GitHub</a
-          > -->
+          <a href="https://www.linkedin.com/in/satyam-kumar-4499951ba/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:ksatyam0468@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
+        <p class="copyright">Designed & Engineered by Satyam Kumar.</p>
       </div>
     </footer>
 
