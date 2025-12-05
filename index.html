@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Satyam Kumar - Cloud Platform Engineer and AI Infrastructure specialist."
+      content="Satyam Kumar - Cloud Platform Engineer, AI Infrastructure Architect, and Home Lab Enthusiast."
     />
     <title>Satyam Kumar | Cloud & AI Infrastructure</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -31,9 +32,9 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Stack</a></li>
-          <li><a href="#projects">Engineering</a></li>
+          <li><a href="#projects">Work</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="assests\Resume v3(S).pdf" target="_blank" class="btn-resume">Resume</a></li>
+          <li><a href="assests/Resume v3.0.1(S).pdf" target="_blank" class="btn-resume">Resume</a></li>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -46,23 +47,23 @@
     <section id="hero">
       <div class="container hero-layout">
         <div class="hero-text-content">
-            <p class="mono-accent">Hi, my name is</p>
+            <p class="mono-accent">Hi, I'm</p>
             <h1>Satyam Kumar.</h1>
-            <h2 class="text-gradient">I build scalable Cloud & AI Infrastructure.</h2>
+            <h2 class="text-gradient">Architecting Cloud & AI Systems.</h2>
             <p class="bio">
-            Bridging the gap between hyperscale cloud (GCP/AWS) and bare-metal hardware. 
-            I am a <strong>Cloud Platform Engineer</strong> and <strong>Home Lab Enthusiast</strong> 
-            passionate about building scalable RAG pipelines, managing hybrid virtualization environments, 
+            I bridge the gap between hyperscale cloud (GCP/AWS) and bare-metal hardware. 
+            A <strong>Cloud Platform Engineer</strong> and <strong>Home Lab Enthusiast</strong> 
+            passionate about building scalable RAG pipelines, optimizing NLP models for inference, 
             and engineering low-latency IoT systems.
             </p>
             <div class="hero-cta">
             <a href="#projects" class="btn-primary">View Infrastructure</a>
-            <a href="#contact" class="btn-outline">Get In Touch</a>
+            <a href="#contact" class="btn-outline">Contact Me</a>
             </div>
         </div>
         <div class="hero-image-container">
             <div class="image-wrapper">
-                <img src="assests/Home/profile.jpg" alt="Satyam Kumar" class="profile-img">
+                <img src="assests/Home/profile.jpg" alt="Satyam Kumar" class="profile-img" loading="lazy">
             </div>
         </div>
       </div>
@@ -76,25 +77,25 @@
           <div class="skill-card">
             <i class="fas fa-cloud skill-icon"></i>
             <h3>Cloud & Infra</h3>
-            <p>Google Cloud Platform (GCE, GCS, Cloud Functions), AWS (EC2), Docker, Kubernetes (Helm), Load Balancing (Tomcat), Cloudflare Zero Trust.</p>
+            <p>GCP (Cloud Functions, GCE), AWS (EC2), Docker, Kubernetes (Helm), Load Balancing, Cloudflare Zero Trust.</p>
           </div>
 
           <div class="skill-card">
-            <i class="fas fa-network-wired skill-icon"></i>
-            <h3>AI & Data Engineering</h3>
-            <p>RAG Pipelines, Vector Databases (Milvus), Local LLMs (Ollama), MQTT, Data Ingestion Pipelines.</p>
+            <i class="fas fa-brain skill-icon"></i>
+            <h3>AI & Data</h3>
+            <p>RAG Pipelines, Hugging Face, PyTorch, Vector DBs (Milvus), Local LLMs (Ollama), n8n Automation.</p>
           </div>
 
           <div class="skill-card">
-            <i class="fas fa-terminal skill-icon"></i>
-            <h3>Automation & Scripting</h3>
-            <p>Python, Bash/Shell Scripting, n8n (Workflow Automation), YAML, Infrastructure as Code principles.</p>
+            <i class="fas fa-code skill-icon"></i>
+            <h3>Development</h3>
+            <p>Python, C++, JavaScript (React/Node), Bash Scripting, YAML, SQL, RESTful APIs, Flask.</p>
           </div>
 
           <div class="skill-card">
             <i class="fas fa-server skill-icon"></i>
             <h3>Hardware & OS</h3>
-            <p>Linux (Debian/Ubuntu), TrueNAS Core (ZFS), Raspberry Pi (ARMv8), AMD Ryzen Workstations, ESP32 Microcontrollers.</p>
+            <p>Linux (Debian/Ubuntu), TrueNAS Core (ZFS), Raspberry Pi (ARMv8), AMD Ryzen Workstations, ESP32.</p>
           </div>
 
         </div>
@@ -103,7 +104,7 @@
 
     <section id="projects">
       <div class="container">
-        <h2 class="section-title"><span>02.</span> Featured Infrastructure</h2>
+        <h2 class="section-title"><span>02.</span> Featured Engineering</h2>
         
         <div class="project-card featured">
           <div class="project-content">
@@ -111,19 +112,47 @@
             <h3 class="project-title">Cloud-Native RAG Application</h3>
             <div class="project-desc">
               <p>
-                A serverless, cloud-native application designed to query 200+ AI research papers. 
-                Architected on <strong>Google Cloud Platform</strong> using Cloud Functions for event-driven processing. 
-                Engineered a microservices stack with Docker to handle PDF parsing, chunking, and vector embedding generation.
+                A serverless, scalable pipeline on <strong>Google Cloud Platform</strong> to query 200+ AI research papers. 
+                Engineered a microservices stack using Cloud Functions for event-driven processing and Docker containers 
+                for PDF parsing, chunking, and vector embedding generation via <strong>Ollama</strong> and <strong>Milvus</strong>.
               </p>
             </div>
             <ul class="project-tech-list">
               <li>GCP</li>
-              <li>Docker</li>
+              <li>Docker Compose</li>
               <li>Python</li>
-              <li>Milvus DB</li>
+              <li>Milvus Vector DB</li>
               <li>Ollama</li>
               <li>FastAPI</li>
             </ul>
+            <!-- <div class="project-links">
+                <a href="#" target="_blank" class="link-highlight"><i class="fab fa-github"></i> Source Code</a>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-content">
+            <p class="project-overline">AI & NLP Engineering</p>
+            <h3 class="project-title">FactChecker</h3>
+            <div class="project-desc">
+              <p>
+                An NLP pipeline engineered to verify news credibility with 91% accuracy. Fine-tuned a <strong>DistilBERT</strong> model 
+                on 67k+ articles using PyTorch. Solved hardware constraints by reducing model parameters by 40% and 
+                migrating training to Google Colab (T4 GPU). Deployed inference API via Docker on <strong>Hugging Face Spaces</strong>.
+              </p>
+            </div>
+            <ul class="project-tech-list">
+              <li>PyTorch</li>
+              <li>Hugging Face</li>
+              <li>DistilBERT</li>
+              <li>Docker</li>
+              <li>React & Flask</li>
+            </ul>
+            <div class="project-links">
+                <a href="https://drive.google.com/file/d/1x0zbR7c2NGPO8Bu1L5IlOultJPO4rIgh/view?usp=sharing" target="_blank" class="link-highlight"><i class="fas fa-external-link-alt"></i> Project Report</a>
+                <a href="https://huggingface.co/spaces/Saty01/FactChecker/tree/main" target="_blank" class="link-highlight"><i class="fab fa-github"></i> Hugging Face</a>
+            </div>
           </div>
         </div>
 
@@ -133,19 +162,21 @@
             <h3 class="project-title">Resourceful Home Lab</h3>
             <div class="project-desc">
               <p>
-                An enterprise-grade hybrid virtualization environment running on heterogeneous hardware 
-                (AMD Ryzen x86 & Raspberry Pi ARM). Hosts a <strong>Network Attached Storage (NAS)</strong> 
-                with ZFS for data integrity, automated via n8n workflows and Bash scripts. 
-                Secured via Cloudflare Zero Trust tunnels to eliminate open ports.
+                An enterprise-grade hybrid virtualization environment running on heterogeneous hardware. 
+                Hosts a <strong>Network Attached Storage (NAS)</strong> with ZFS for data integrity, automated via n8n workflows. 
+                Secured via <strong>Cloudflare Zero Trust</strong> tunnels to expose services securely without opening router ports.
               </p>
             </div>
             <ul class="project-tech-list">
               <li>TrueNAS Core (ZFS)</li>
               <li>VirtualBox</li>
               <li>Cloudflare Zero Trust</li>
-              <li>n8n</li>
+              <li>n8n Automation</li>
               <li>Bash</li>
             </ul>
+            <!-- <div class="project-links">
+                <a href="#" target="_blank" class="link-highlight"><i class="fab fa-github"></i> Configs / Scripts</a>
+            </div> -->
           </div>
         </div>
 
@@ -157,7 +188,7 @@
               <p>
                 A distributed, low-latency IoT node engineered with C++ and ESP32s. 
                 Integrated with <strong>Home Assistant</strong> via MQTT for central state management and automation.
-                Optimized the firmware to utilize dual-core processing for real-time FFT signal analysis, ensuring zero-lag sound reactivity.
+                Optimized firmware utilizes real-time FFT signal analysis for zero-lag sound reactivity and E1.31 protocol support.
               </p>
             </div>
             <ul class="project-tech-list">
@@ -165,29 +196,32 @@
               <li>ESP32</li>
               <li>MQTT</li>
               <li>Home Assistant</li>
-              <li>Signal Processing (FFT)</li>
+              <li>DSP (FFT)</li>
             </ul>
+            <!-- <div class="project-links">
+                <a href="#" target="_blank" class="link-highlight"><i class="fab fa-github"></i> Source Code</a>
+            </div> -->
           </div>
         </div>
 
         <div class="project-card featured">
           <div class="project-content">
-            <p class="project-overline">Product Engineering</p>
+            <p class="project-overline">Product Experience</p>
             <h3 class="project-title">DIY Ambilight TV Backlight</h3>
             <div class="project-desc">
               <p>
-                An immersive media experience inspired by concert lighting. Synchronizes LED lighting with on-screen video content using HyperHDR and WLED. 
-                Features custom presets, wireless synchronization, and a fully integrated user experience.
+                An immersive media experience inspired by concert lighting. Synchronizes LED lighting with on-screen video content using 
+                <strong>HyperHDR</strong> and <strong>WLED</strong>. Features custom presets, wireless synchronization, and a fully integrated user experience.
               </p>
             </div>
             <ul class="project-tech-list">
               <li>HyperHDR</li>
               <li>WLED</li>
               <li>E1.31 Protocol</li>
-              <li>User Experience</li>
+              <li>UX Design</li>
             </ul>
             <div class="project-links">
-               <a href="ambilight_blog.html" class="link-highlight">Read Project Blog <i class="fas fa-arrow-right"></i></a>
+               <a href="ambilight_blog.html" class="link-highlight">Project Blog <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -199,17 +233,18 @@
             <div class="project-desc">
               <p>
                 A Progressive Web Application for environmental awareness. Built with ReactJS and PostgreSQL. 
-                Optimized for performance using Service Workers for offline capabilities.
+                Optimized for performance using Service Workers for offline capabilities, demonstrating strong fundamentals in web architecture.
               </p>
             </div>
             <ul class="project-tech-list">
               <li>ReactJS</li>
               <li>PostgreSQL</li>
               <li>PWA</li>
-              <li>JavaScript</li>
+              <li>Node.js</li>
             </ul>
             <div class="project-links">
-                <a href="assests/Projects/INTERPLANT Final Report.pdf" target="_blank" class="link-highlight">View Project Report <i class="fas fa-file-pdf"></i></a>
+                <a href="assests/Projects/INTERPLANT Final Report.pdf" target="_blank" class="link-highlight">Project Report <i class="fas fa-file-pdf"></i></a>
+                <!-- <a href="#" target="_blank" class="link-highlight"><i class="fab fa-github"></i> Source Code</a> -->
             </div>
           </div>
         </div>
@@ -228,12 +263,12 @@
               I build the underlying infrastructure.
             </p>
             <p>
-              My journey started with web development (building apps like InterPlant), but I pivoted when I realized 
-              I enjoyed configuring the servers more than centering the Divs. Today, I focus on <strong>Hybrid Cloud</strong> 
+              My journey started with web development, but I pivoted when I realized I enjoyed 
+              configuring servers and pipelines more than centering Divs. Today, I focus on <strong>Hybrid Cloud</strong> 
               solutions, deploying local AI models on bare metal, and architecting secure networks.
             </p>
             <p>
-                Currently, I am optimizing local LLMs (Gemma, Deepseek) to run efficiently on consumer hardware 
+                Currently, I am stress-testing local LLMs (Gemma, Deepseek) to analyze resource constraints 
                 and architecting serverless pipelines on GCP.
             </p>
           </div>
@@ -248,7 +283,7 @@
               </li>
               <li>
                 <a href="https://drive.google.com/file/d/1LrtlmtPSeY_TG7R93oDSTtly3FRGXEJK/view" target="_blank" class="cert-link">
-                    <strong>Introduction to Quantum Computing</strong>
+                    <strong>Intro to Quantum Computing</strong>
                 </a><br>
                 <span class="mono-accent">Qubit x Qubit / IBM Quantum</span>
               </li>
@@ -256,7 +291,7 @@
                 <a href="https://www.brightnetwork.co.uk/certificates/internship-experience-uk-techn_uenbvidzgm6sqo/" target="_blank" class="cert-link">
                     <strong>Internship Experience UK: Technology</strong>
                 </a><br>
-                <span class="mono-accent">Bright Network (Partnered with Google & Amazon)</span>
+                <span class="mono-accent">Bright Network (Google & Amazon)</span>
               </li>
             </ul>
           </div>
@@ -268,8 +303,8 @@
         <div class="container">
             <h2 class="section-title center-title"><span>04.</span> Get In Touch</h2>
             <p class="contact-intro">
-                I'm currently looking for opportunities in Cloud Engineering and AI Infrastructure. 
-                Whether you have a question about my Home Lab, want to discuss IoT, or just want to say hi, my inbox is open.
+                I'm currently looking for opportunities in Cloud Platform Engineering and AI Infrastructure. 
+                Whether you have a question about my Home Lab or want to discuss serverless architectures, my inbox is open.
             </p>
             
             <div class="contact-wrapper">
